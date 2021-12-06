@@ -11,7 +11,6 @@ namespace CCPolandAPI.DAL.Data
     {
         public CCPolandDbContext(DbContextOptions<CCPolandDbContext> options) : base(options)
         {
-
         }
 
         public DbSet<Material> Materials { get; set; }

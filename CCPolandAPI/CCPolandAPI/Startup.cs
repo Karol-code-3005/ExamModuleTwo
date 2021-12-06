@@ -42,6 +42,9 @@ namespace CCPolandAPI
             services.AddDbContext<CCPolandDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("CCPolandDbContext")));
 
+            services.AddScoped<Seeder>();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { 
@@ -57,8 +60,10 @@ namespace CCPolandAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, Seeder seeder)
         {
+            seeder.Seed();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
