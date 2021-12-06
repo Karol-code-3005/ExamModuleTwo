@@ -61,6 +61,51 @@ namespace CCPolandAPI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AUTHOR NOT FOUND.
+        /// </summary>
+        public static string authorNotFound {
+            get {
+                return ResourceManager.GetString("authorNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author creating....
+        /// </summary>
+        public static string creatingAuthor {
+            get {
+                return ResourceManager.GetString("creatingAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author deleting....
+        /// </summary>
+        public static string deletingAuthor {
+            get {
+                return ResourceManager.GetString("deletingAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting all authors....
+        /// </summary>
+        public static string gettingAllAuthors {
+            get {
+                return ResourceManager.GetString("gettingAllAuthors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting author....
+        /// </summary>
+        public static string gettingAuthor {
+            get {
+                return ResourceManager.GetString("gettingAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ITEM NOT FOUND.
         /// </summary>
         public static string itemNotFound {
@@ -70,11 +115,29 @@ namespace CCPolandAPI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Operation succeeded.
+        /// </summary>
+        public static string succeeded {
+            get {
+                return ResourceManager.GetString("succeeded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UNEXPECTED ERROR OCCURED.
         /// </summary>
         public static string unexpectedError {
             get {
                 return ResourceManager.GetString("unexpectedError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author updating....
+        /// </summary>
+        public static string updatingAuthor {
+            get {
+                return ResourceManager.GetString("updatingAuthor", resourceCulture);
             }
         }
     }

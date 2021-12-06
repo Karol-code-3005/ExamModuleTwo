@@ -25,7 +25,7 @@ namespace CCPolandAPI.Services.ErrorHandling.Middleware
             }
             catch (NotFoundException ex)
             {
-                _logger.LogError(ex, Resource.ResourceManager.GetString("itemNotFound"));
+                _logger.LogWarning(ex, Resource.ResourceManager.GetString("itemNotFound"));
                 context.Response.StatusCode = (int)HttpStatusCode.NotFound;
                 await context.Response.WriteAsync(ex.Message);
             }

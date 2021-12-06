@@ -21,9 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="DAL\Repositories\Interfaces\" />
-    <Folder Include="Services\AutoMapperProfiles\" />
     <Folder Include="Services\Validators\" />
   </ItemGroup>
 

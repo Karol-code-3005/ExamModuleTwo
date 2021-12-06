@@ -7,7 +7,7 @@ namespace CCPolandAPI.DAL.Interfaces.IAble
         where L : class
         where S : class
     {
-        Task<L> GetById(int id);
-        Task<IEnumerable<S>> GetAll();
+        Task<L> GetByIdAsync(int id);
+        Task<IEnumerable<S>> GetAllAsync();
     }
 }

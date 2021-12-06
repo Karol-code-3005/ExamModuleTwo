@@ -8,6 +8,7 @@ namespace CCPolandAPI.DAL.Repositories.Interfaces
         ICreatable<AuthorModifyDto>,
         IReadable<Author>,
         IUpdatable<AuthorModifyDto>,
+        IPartialUpdatable<Author>,
         IDeletable,
         IGetable<AuthorLongDto, AuthorShortDto>
     {

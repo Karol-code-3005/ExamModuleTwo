@@ -1,4 +1,9 @@
+using AutoMapper;
+using CCPolandAPI.Controllers;
 using CCPolandAPI.DAL.Data;
+using CCPolandAPI.DAL.Repositories;
+using CCPolandAPI.DAL.Repositories.Interfaces;
+using CCPolandAPI.Services.ErrorHandling.Middleware;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,13 +37,19 @@ namespace CCPolandAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers().AddFluentValidation();
+            services.AddControllers().AddFluentValidation().AddNewtonsoftJson();
 
 
 
 
 
             services.AddScoped<Seeder>();
+            services.AddScoped<ErrorHandlingMiddleware>();
+            services.AddScoped<IAuthorRepo, AuthorRepo>();
+
+            //services.AddScoped<IGenreRepo, GenreRepo>();
+            //services.AddScoped<IMaterialRepo, MaterialRepo>();
+            //services.AddScoped<IReviewRepo, ReviewRepo>();
 
 
 

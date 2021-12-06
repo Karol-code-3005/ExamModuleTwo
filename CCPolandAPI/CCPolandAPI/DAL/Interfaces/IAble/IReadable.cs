@@ -4,6 +4,6 @@ namespace CCPolandAPI.DAL.Interfaces.IAble
 {
     public interface IReadable<C> where C : class  
     {
-        Task<C> Read(int id);
+        Task<C> ReadModelAsync(int id);
     }
 }

@@ -117,10 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="authorNotFound" xml:space="preserve">
+    <value>AUTHOR NOT FOUND</value>
+  </data>
+  <data name="creatingAuthor" xml:space="preserve">
+    <value>Author creating...</value>
+  </data>
+  <data name="deletingAuthor" xml:space="preserve">
+    <value>Author deleting...</value>
+  </data>
+  <data name="gettingAllAuthors" xml:space="preserve">
+    <value>Getting all authors...</value>
+  </data>
+  <data name="gettingAuthor" xml:space="preserve">
+    <value>Getting author...</value>
+  </data>
   <data name="itemNotFound" xml:space="preserve">
     <value>ITEM NOT FOUND</value>
   </data>
+  <data name="succeeded" xml:space="preserve">
+    <value>Operation succeeded</value>
+  </data>
   <data name="unexpectedError" xml:space="preserve">
     <value>UNEXPECTED ERROR OCCURED</value>
+  </data>
+  <data name="updatingAuthor" xml:space="preserve">
+    <value>Author updating...</value>
   </data>
 </root>
