@@ -11,10 +11,13 @@ namespace CCPolandAPI.Models.EntityModels
     {
         public int Id { get; set; }
         [Required]
+        [StringLength(50, MinimumLength = 2)]
         public string Title { get; set; }
         [Required]
+        [StringLength(300, MinimumLength = 2)]
         public string MaterialDescription { get; set; }
         [Required]
+        [StringLength(100, MinimumLength = 10)]
         public string Location { get; set; }
         public DateTime DateOfPublishing{ get; set; }
 

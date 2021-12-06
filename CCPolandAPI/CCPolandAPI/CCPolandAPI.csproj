@@ -23,11 +23,23 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="DAL\Repositories\Interfaces\" />
-    <Folder Include="Models\DTOS\" />
     <Folder Include="Services\AutoMapperProfiles\" />
-    <Folder Include="Services\ErrorHandling\Exceptions\" />
-    <Folder Include="Services\ErrorHandling\Middleware\" />
     <Folder Include="Services\Validators\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 	<PropertyGroup>

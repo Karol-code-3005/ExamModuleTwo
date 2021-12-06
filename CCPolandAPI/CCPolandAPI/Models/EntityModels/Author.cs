@@ -15,14 +15,8 @@ namespace CCPolandAPI.Models.EntityModels
         [Required]
         [StringLength(300, MinimumLength = 2)]
         public string AuthorDescription { get; set; }
-        public int MaterialsCounter => GetCountOfMaterials();
 
-        public IEnumerable<Material> Materials { get; set; } = new List<Material>();
+        public IEnumerable<Material> Materials { get; set; } 
 
-        private int GetCountOfMaterials()
-        {
-            int count = Materials.Count();
-            return count;
-        }
     }
 }

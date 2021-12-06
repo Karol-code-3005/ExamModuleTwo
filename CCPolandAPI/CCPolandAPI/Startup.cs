@@ -40,6 +40,13 @@ namespace CCPolandAPI
 
             services.AddScoped<Seeder>();
 
+
+
+
+
+
+
+
             services.AddDbContext<CCPolandDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("CCPolandDbContext")));
 
