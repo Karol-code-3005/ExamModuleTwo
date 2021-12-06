@@ -79,11 +79,38 @@ namespace CCPolandAPI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Genre creating....
+        /// </summary>
+        public static string creatingGenre {
+            get {
+                return ResourceManager.GetString("creatingGenre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Author deleting....
         /// </summary>
         public static string deletingAuthor {
             get {
                 return ResourceManager.GetString("deletingAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Genre deleting....
+        /// </summary>
+        public static string deletingGenre {
+            get {
+                return ResourceManager.GetString("deletingGenre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GENRE NOT FOUND.
+        /// </summary>
+        public static string genreNotFound {
+            get {
+                return ResourceManager.GetString("genreNotFound", resourceCulture);
             }
         }
         
@@ -97,11 +124,29 @@ namespace CCPolandAPI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting all genres....
+        /// </summary>
+        public static string gettingAllGenres {
+            get {
+                return ResourceManager.GetString("gettingAllGenres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Getting author....
         /// </summary>
         public static string gettingAuthor {
             get {
                 return ResourceManager.GetString("gettingAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting genre....
+        /// </summary>
+        public static string gettingGenre {
+            get {
+                return ResourceManager.GetString("gettingGenre", resourceCulture);
             }
         }
         
@@ -138,6 +183,15 @@ namespace CCPolandAPI.Properties {
         public static string updatingAuthor {
             get {
                 return ResourceManager.GetString("updatingAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Genre updating....
+        /// </summary>
+        public static string updatingGenre {
+            get {
+                return ResourceManager.GetString("updatingGenre", resourceCulture);
             }
         }
     }

@@ -28,8 +28,8 @@ namespace CCPolandAPI.DAL.Repositories
         public async Task<int> AddAsync(AuthorModifyDto authorModifyDto)
         {
             _logger.LogInformation(Resource.ResourceManager.GetString("creatingAuthor"));
-            Author authorModel = _mapper.Map<Author>( authorModifyDto );
-            await _context.AddAsync( authorModel );
+            Author authorModel = _mapper.Map<Author>(authorModifyDto);
+            await _context.Authors.AddAsync(authorModel);
             await _context.SaveChangesAsync();
             _logger.LogInformation(Resource.ResourceManager.GetString("succeeded"));
 
@@ -86,7 +86,7 @@ namespace CCPolandAPI.DAL.Repositories
         public async Task PartialUpdateAsync(Author authorToUpdate)
         {
             _logger.LogInformation(Resource.ResourceManager.GetString("updatingAuthor"));
-            if (authorToUpdate == null)
+            if (authorToUpdate is null)
             {
                 throw new NotFoundException(Resource.ResourceManager.GetString("authorNotFound"));
             }
@@ -99,7 +99,7 @@ namespace CCPolandAPI.DAL.Repositories
         {
             _logger.LogInformation(Resource.ResourceManager.GetString("updatingAuthor"));
             Author authorToUpdate = await _context.Authors.SingleOrDefaultAsync(x =>x.Id==id);
-            if (authorToUpdate == null)
+            if (authorToUpdate is null)
             {
                 throw new NotFoundException(Resource.ResourceManager.GetString("authorNotFound"));
             }

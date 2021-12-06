@@ -123,14 +123,29 @@
   <data name="creatingAuthor" xml:space="preserve">
     <value>Author creating...</value>
   </data>
+  <data name="creatingGenre" xml:space="preserve">
+    <value>Genre creating...</value>
+  </data>
   <data name="deletingAuthor" xml:space="preserve">
     <value>Author deleting...</value>
+  </data>
+  <data name="deletingGenre" xml:space="preserve">
+    <value>Genre deleting...</value>
+  </data>
+  <data name="genreNotFound" xml:space="preserve">
+    <value>GENRE NOT FOUND</value>
   </data>
   <data name="gettingAllAuthors" xml:space="preserve">
     <value>Getting all authors...</value>
   </data>
+  <data name="gettingAllGenres" xml:space="preserve">
+    <value>Getting all genres...</value>
+  </data>
   <data name="gettingAuthor" xml:space="preserve">
     <value>Getting author...</value>
+  </data>
+  <data name="gettingGenre" xml:space="preserve">
+    <value>Getting genre...</value>
   </data>
   <data name="itemNotFound" xml:space="preserve">
     <value>ITEM NOT FOUND</value>
@@ -143,5 +158,8 @@
   </data>
   <data name="updatingAuthor" xml:space="preserve">
     <value>Author updating...</value>
+  </data>
+  <data name="updatingGenre" xml:space="preserve">
+    <value>Genre updating...</value>
   </data>
 </root>

@@ -8,6 +8,7 @@ namespace CCPolandAPI.DAL.Repositories.Interfaces
         ICreatable<GenreModifyDto>,
         IReadable<Genre>,
         IUpdatable<GenreModifyDto>,
+        IPartialUpdatable<Genre>,
         IDeletable,
         IGetable<GenreLongDto, GenreShortDto>
     {

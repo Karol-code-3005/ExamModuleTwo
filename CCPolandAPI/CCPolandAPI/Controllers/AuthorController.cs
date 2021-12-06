@@ -65,8 +65,8 @@ namespace CCPolandAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateNewAuthor([FromBody] AuthorModifyDto authorModifyDto)
         {
-            int newDirectorId = await _authorRepo.AddAsync(authorModifyDto);
-            return Created($"/authors/{newDirectorId}", null);
+            int newAuthorId = await _authorRepo.AddAsync(authorModifyDto);
+            return Created($"/authors/{newAuthorId}", null);
         }
 
         /// <summary>
@@ -137,7 +137,7 @@ namespace CCPolandAPI.Controllers
         ///
         ///     PUT /Todo
         ///     {
-        ///        "name": "Update Author"
+        ///        "name": "Update Author",
         ///        "authorDescription": "Very good very nice"
         ///     }
         ///
@@ -150,7 +150,5 @@ namespace CCPolandAPI.Controllers
             await _authorRepo.UpdateAsync(authorId, authorModifyDto);
             return NoContent();
         }
-
-
     }
 }
