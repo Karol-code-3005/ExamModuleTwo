@@ -38,13 +38,13 @@ namespace CCPolandAPI
 
 
 
+            services.AddScoped<Seeder>();
 
             services.AddDbContext<CCPolandDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("CCPolandDbContext")));
 
-            services.AddScoped<Seeder>();
-
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { 
@@ -74,6 +74,10 @@ namespace CCPolandAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+
+
+
 
             app.UseAuthorization();
 
