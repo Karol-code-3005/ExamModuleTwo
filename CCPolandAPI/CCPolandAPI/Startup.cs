@@ -1,7 +1,10 @@
+using CCPolandAPI.DAL.Data;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,7 +12,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace CCPolandAPI
@@ -27,10 +32,27 @@ namespace CCPolandAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation();
+
+
+
+
+
+
+            services.AddDbContext<CCPolandDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("CCPolandDbContext")));
+
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CCPolandAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { 
+                    Title = "CCPolandAPI",
+                    Description = "This API helps all CodeCool Students to become better programmers \n\n" +
+                    "Author: Karol Bieniaszewski",
+                    Version = "v1" });
+
+                var fileName = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var filePath = Path.Combine(AppContext.BaseDirectory, fileName);
+                c.IncludeXmlComments(filePath);
             });
         }
 
