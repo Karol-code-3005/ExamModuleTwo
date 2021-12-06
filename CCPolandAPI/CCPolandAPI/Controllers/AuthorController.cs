@@ -88,7 +88,7 @@ namespace CCPolandAPI.Controllers
         /// </summary>
         /// <param name="authorId"></param>
         /// <param name="patchDoc"></param>
-        /// <returns>Returns 204 NoContent</returns>
+        /// <returns>Returns 200 Ok</returns>
         /// <remarks>
         /// Sample request:
         ///
@@ -106,7 +106,7 @@ namespace CCPolandAPI.Controllers
         ///       }
         ///     ]
         /// </remarks>
-        /// <response code="204">Returns no content</response>
+        /// <response code="200">Returns Ok</response>
         [HttpPatch]
         [Route("{authorId}")]
         public async Task<ActionResult> PartialUpdateAuthor([FromRoute] int authorId, [FromBody] JsonPatchDocument<AuthorModifyDto> patchDoc)
@@ -123,7 +123,7 @@ namespace CCPolandAPI.Controllers
 
             _mapper.Map(authorToPatch, authorToUpdate);
             await _authorRepo.PartialUpdateAsync(authorToUpdate);
-            return NoContent();
+            return Ok();
         }
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace CCPolandAPI.Controllers
         /// </summary>
         /// <param name="authorId"></param>
         /// <param name="authorModifyDto"></param>
-        /// <returns>Returns 204 no content</returns>
+        /// <returns>Returns 200 Ok</returns>
         /// <remarks>
         /// Sample request:
         ///
@@ -142,13 +142,13 @@ namespace CCPolandAPI.Controllers
         ///     }
         ///
         /// </remarks>
-        /// <response code="204">Returns no content</response>
+        /// <response code="200">Returns Ok</response>
         [HttpPut]
         [Route("{authorId}")]
         public async Task<ActionResult> UpdateAuthor([FromRoute] int authorId, [FromBody] AuthorModifyDto authorModifyDto)
         {
             await _authorRepo.UpdateAsync(authorId, authorModifyDto);
-            return NoContent();
+            return Ok();
         }
     }
 }

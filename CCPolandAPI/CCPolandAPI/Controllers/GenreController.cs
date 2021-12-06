@@ -2,6 +2,7 @@
 using CCPolandAPI.DAL.Repositories.Interfaces;
 using CCPolandAPI.Models.DTOS.Author;
 using CCPolandAPI.Models.DTOS.Genre;
+using CCPolandAPI.Models.DTOS.Material;
 using CCPolandAPI.Models.EntityModels;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -89,7 +90,7 @@ namespace CCPolandAPI.Controllers
         /// </summary>
         /// <param name="genreId"></param>
         /// <param name="patchDoc"></param>
-        /// <returns>Returns 204 NoContent</returns>
+        /// <returns>Returns 200 Ok</returns>
         /// <remarks>
         /// Sample request:
         ///
@@ -107,7 +108,7 @@ namespace CCPolandAPI.Controllers
         ///       }
         ///     ]
         /// </remarks>
-        /// <response code="204">Returns no content</response>
+        /// <response code="200">Returns Ok</response>
         [HttpPatch]
         [Route("{genreId}")]
         public async Task<ActionResult> PartialUpdateGenre([FromRoute] int genreId, [FromBody] JsonPatchDocument<GenreModifyDto> patchDoc)
@@ -124,7 +125,7 @@ namespace CCPolandAPI.Controllers
 
             _mapper.Map(genreToPatch, genreToUpdate);
             await _genreRepo.PartialUpdateAsync(genreToUpdate);
-            return NoContent();
+            return Ok();
         }
 
         /// <summary>
@@ -132,7 +133,7 @@ namespace CCPolandAPI.Controllers
         /// </summary>
         /// <param name="genreId"></param>
         /// <param name="genreModifyDto"></param>
-        /// <returns>Returns 204 no content</returns>
+        /// <returns>Returns 200 Okt</returns>
         /// <remarks>
         /// Sample request:
         ///
@@ -143,13 +144,13 @@ namespace CCPolandAPI.Controllers
         ///     }
         ///
         /// </remarks>
-        /// <response code="204">Returns no content</response>
+        /// <response code="200">Returns Ok</response>
         [HttpPut]
         [Route("{genreId}")]
         public async Task<ActionResult> UpdateGenre([FromRoute] int genreId, [FromBody] GenreModifyDto genreModifyDto)
         {
             await _genreRepo.UpdateAsync(genreId, genreModifyDto);
-            return NoContent();
+            return Ok();
         }
     }
 }

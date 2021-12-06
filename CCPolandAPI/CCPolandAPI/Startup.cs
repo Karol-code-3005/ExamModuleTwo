@@ -47,6 +47,8 @@ namespace CCPolandAPI
             services.AddScoped<ErrorHandlingMiddleware>();
             services.AddScoped<IAuthorRepo, AuthorRepo>();
             services.AddScoped<IGenreRepo, GenreRepo>();
+
+
             //services.AddScoped<IMaterialRepo, MaterialRepo>();
             //services.AddScoped<IReviewRepo, ReviewRepo>();
 
