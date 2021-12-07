@@ -49,7 +49,6 @@ namespace CCPolandAPI
             services.AddScoped<IMaterialRepo, MaterialRepo>();
             services.AddScoped<IReviewRepo, ReviewRepo>();
 
-
             services.AddDbContext<CCPolandDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("CCPolandDbContext")));
 
@@ -80,6 +79,8 @@ namespace CCPolandAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CCPolandAPI v1"));
             }
+
+            app.UseMiddleware<ErrorHandlingMiddleware>();
 
             app.UseHttpsRedirection();
 

@@ -54,9 +54,9 @@ namespace CCPolandAPI.Controllers
         ///        "title": "New Material",
         ///        "materialDescription": "Very good very nice material",
         ///        "location": "www.supernewextramaterial.com/material/good-material",
-        ///        "DateOfPublishing":"2019-05-30T00:00:00"
+        ///        "DateOfPublishing":"2019-05-30T00:00:00",
         ///        "authorId": 1,
-        ///        "genreId": 2,
+        ///        "genreId": 2
         ///     }
         ///
         /// </remarks>
@@ -96,9 +96,9 @@ namespace CCPolandAPI.Controllers
         ///        "title": "Put Material",
         ///        "materialDescription": "Very good very nice material update test",
         ///        "location": "www.supernewextramaterial.com/material/good-material/update",
-        ///        "DateOfPublishing": "2020-09-20T00:00:00"
+        ///        "DateOfPublishing": "2020-09-20T00:00:00",
         ///        "authorId": 3,
-        ///        "genreId": 4,
+        ///        "genreId": 4
         ///     }
         ///
         /// </remarks>
