@@ -39,9 +39,54 @@ namespace CCPolandAPI.DAL.Data
                     _context.Reviews.AddRange(GetReviews());
                     _context.SaveChanges();
                 }
+                if (!_context.Roles.Any())
+                {
+                    _context.Roles.AddRange(GetRoles());
+                    _context.SaveChanges();
+                }
+                if (!_context.Users.Any())
+                {
+                    _context.Users.AddRange(GetUsers());
+                    _context.SaveChanges();
+                }
             }
         }
 
+        private IEnumerable<User> GetUsers()
+        {
+            List<User> users = new()
+            {
+                new User()
+                {
+                    Login = "Admin123",
+                    Password = "admin123",
+                    RoleId = 1
+                },
+                new User()
+                {
+                    Login = "User123",
+                    Password = "user123",
+                    RoleId=2
+                }
+            };
+            return users;
+        }
+
+        private IEnumerable<Role> GetRoles()
+        {
+            List<Role> roles = new()
+            {
+                new Role()
+                {
+                    Name = "Admin"
+                },
+                new Role()
+                {
+                    Name = "User"
+                }
+            };
+            return roles;
+        }
 
         private IEnumerable<Author> GetAuthors()
         {
