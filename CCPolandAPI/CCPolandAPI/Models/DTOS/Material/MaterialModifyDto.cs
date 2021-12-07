@@ -11,7 +11,7 @@ namespace CCPolandAPI.Models.DTOS.Material
         [StringLength(300, MinimumLength = 2)]
         public string MaterialDescription { get; set; }
 
-        [StringLength(300, MinimumLength = 10)]
+        [StringLength(100, MinimumLength = 10)]
         public string Location { get; set; }
 
         public DateTime DateOfPublishing { get; set; }

@@ -1,27 +1,22 @@
-using AutoMapper;
-using CCPolandAPI.Controllers;
 using CCPolandAPI.DAL.Data;
 using CCPolandAPI.DAL.Repositories;
 using CCPolandAPI.DAL.Repositories.Interfaces;
 using CCPolandAPI.DAL.Repositories.Interfaces.IModel;
+using CCPolandAPI.Models.DTOS.Material;
 using CCPolandAPI.Services.ErrorHandling.Middleware;
+using CCPolandAPI.Services.Validators;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace CCPolandAPI
 {
@@ -48,16 +43,11 @@ namespace CCPolandAPI
 
             services.AddScoped<Seeder>();
             services.AddScoped<ErrorHandlingMiddleware>();
+            services.AddScoped<IValidator<MaterialModifyDto>, MaterialModifyDtoValidator>();
             services.AddScoped<IAuthorRepo, AuthorRepo>();
             services.AddScoped<IGenreRepo, GenreRepo>();
             services.AddScoped<IMaterialRepo, MaterialRepo>();
             services.AddScoped<IReviewRepo, ReviewRepo>();
-
-
-
-
-
-
 
 
             services.AddDbContext<CCPolandDbContext>(options =>
@@ -68,7 +58,7 @@ namespace CCPolandAPI
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { 
-                    Title = "CCPolandAPI",
+                    Title = "CodeCoolPolandAPI",
                     Description = "This API helps all CodeCool Students to become better programmers \n\n" +
                     "Author: Karol Bieniaszewski",
                     Version = "v1" });
@@ -96,7 +86,6 @@ namespace CCPolandAPI
             app.UseRouting();
 
             app.UseCors();
-
 
             app.UseAuthorization();
 
