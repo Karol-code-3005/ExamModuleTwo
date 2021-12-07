@@ -41,7 +41,9 @@ namespace CCPolandAPI
             services.AddControllers().AddFluentValidation().AddNewtonsoftJson();
 
 
-
+            services.AddCors(options =>
+                options.AddDefaultPolicy(builder =>
+                    builder.AllowAnyOrigin()));
 
 
             services.AddScoped<Seeder>();
@@ -93,8 +95,7 @@ namespace CCPolandAPI
 
             app.UseRouting();
 
-
-
+            app.UseCors();
 
 
             app.UseAuthorization();

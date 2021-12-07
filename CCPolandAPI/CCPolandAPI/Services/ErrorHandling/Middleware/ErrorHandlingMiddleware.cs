@@ -27,7 +27,7 @@ namespace CCPolandAPI.Services.ErrorHandling.Middleware
             {
                 _logger.LogWarning(ex, Resource.ResourceManager.GetString("itemNotFound"));
                 context.Response.StatusCode = (int)HttpStatusCode.NotFound;
-                await context.Response.WriteAsync(ex.Message);
+                await context.Response.WriteAsync(Resource.ResourceManager.GetString("itemNotFound"));
             }
             catch (NullReferenceException ex)
             {
@@ -46,7 +46,7 @@ namespace CCPolandAPI.Services.ErrorHandling.Middleware
             {
                 _logger.LogError(ex, Resource.ResourceManager.GetString("unexpectedError")); 
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                await context.Response.WriteAsync(ex.Message);
+                await context.Response.WriteAsync(Resource.ResourceManager.GetString("unexpectedError"));
             }
         }
     }
