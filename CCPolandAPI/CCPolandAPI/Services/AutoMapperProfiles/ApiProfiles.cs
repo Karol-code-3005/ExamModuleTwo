@@ -28,10 +28,6 @@ namespace CCPolandAPI.Services.AutoMapperProfiles
             CreateMap<Review, ReviewDto>().ReverseMap();
             CreateMap<Review, ReviewModifyDto>().ReverseMap();
 
-
-            //dodawanie nowego review?
-            // updatowanie review? 
-            //spr w ReviewRepo!
         }
     }
 }

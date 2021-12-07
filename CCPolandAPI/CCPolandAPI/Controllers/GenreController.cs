@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using CCPolandAPI.DAL.Repositories.Interfaces;
-using CCPolandAPI.Models.DTOS.Author;
 using CCPolandAPI.Models.DTOS.Genre;
-using CCPolandAPI.Models.DTOS.Material;
 using CCPolandAPI.Models.EntityModels;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
