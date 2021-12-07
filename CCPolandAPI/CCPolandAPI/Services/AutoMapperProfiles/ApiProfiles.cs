@@ -14,18 +14,18 @@ namespace CCPolandAPI.Services.AutoMapperProfiles
             //source -> target
 
             CreateMap<Author, AuthorLongDto>().ReverseMap();
-            CreateMap<Author, AuthorShortDto>().ReverseMap(); ;
+            CreateMap<Author, AuthorShortDto>().ReverseMap();
             CreateMap<Author, AuthorModifyDto>().ReverseMap();
 
             CreateMap<Genre, GenreLongDto>().ReverseMap(); ;
             CreateMap<Genre, GenreShortDto>().ReverseMap(); ;
             CreateMap<Genre, GenreModifyDto>().ReverseMap();
 
-            CreateMap<Material, MaterialLongDto>().ReverseMap(); ;
-            CreateMap<Material, MaterialShortDto>().ReverseMap(); ;
+            CreateMap<Material, MaterialLongDto>().ReverseMap();
+            CreateMap<Material, MaterialShortDto>().ReverseMap();
             CreateMap<Material, MaterialModifyDto>().ReverseMap();
 
-            CreateMap<Review, ReviewDto>().ReverseMap(); ;
+            CreateMap<Review, ReviewDto>().ReverseMap();
             CreateMap<Review, ReviewModifyDto>().ReverseMap();
 
 

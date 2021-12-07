@@ -15,5 +15,9 @@ namespace CCPolandAPI.Models.DTOS.Material
         public string Location { get; set; }
 
         public DateTime DateOfPublishing { get; set; }
+ 
+        public int AuthorId { get; set; }
+
+        public int GenreId { get; set; }
     }
 }

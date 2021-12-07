@@ -7,7 +7,6 @@ namespace CCPolandAPI.DAL.Repositories.Interfaces
 {
     public interface IMaterialRepo :
         ICreatable<MaterialModifyDto>,
-        IReadable<Material>,
         IUpdatable<MaterialModifyDto>,
         IDeletable,
         IGetable<MaterialLongDto, MaterialShortDto>

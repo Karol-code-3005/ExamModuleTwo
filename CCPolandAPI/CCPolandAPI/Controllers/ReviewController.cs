@@ -48,7 +48,7 @@ namespace CCPolandAPI.Controllers
         /// <returns>Returns 204 NoContent</returns>
         /// <response code="204">Returns no content</response>
         [HttpDelete]
-        [Route("{rewievId}")]
+        [Route("{reviewId}")]
         public async Task<ActionResult> DeleteReview([FromRoute] int materialId, [FromRoute] int reviewId)
         {
             await _reviewRepo.Delete(materialId, reviewId);
@@ -74,7 +74,7 @@ namespace CCPolandAPI.Controllers
         /// </remarks>
         /// <response code="200">Returns Ok</response>
         [HttpPut]
-        [Route("{rewievId}")]
+        [Route("{reviewId}")]
         public async Task<ActionResult> UpdateReview([FromRoute] int materialId, [FromRoute] int reviewId, [FromBody] ReviewModifyDto reviewModifyDto)
         {
             await _reviewRepo.UpdateAsync(materialId, reviewId, reviewModifyDto);

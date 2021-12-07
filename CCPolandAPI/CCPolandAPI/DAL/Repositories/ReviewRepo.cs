@@ -30,7 +30,7 @@ namespace CCPolandAPI.DAL.Repositories
         {
             _logger.LogInformation(Resource.ResourceManager.GetString("creatingReview"));
             Review reviewModel = _mapper.Map<Review>(reviewModifyDto);
-            reviewModel.MaterialId = materialId; /////////////////////////// do zrobienia w mapperrze
+            reviewModel.MaterialId = materialId;
             await _context.Reviews.AddAsync(reviewModel);
             await _context.SaveChangesAsync();
             _logger.LogInformation(Resource.ResourceManager.GetString("succeeded"));
@@ -53,13 +53,13 @@ namespace CCPolandAPI.DAL.Repositories
         public async Task UpdateAsync(int materialId, int reviewId, ReviewModifyDto reviewModifyDto)
         {
             _logger.LogInformation(Resource.ResourceManager.GetString("updatingReview"));
-            Review reviewToUpdate = await _context.Reviews.Where(x =>x.MaterialId == materialId).SingleOrDefaultAsync(x => x.Id == reviewId);
+            Review reviewToUpdate = await _context.Reviews.SingleOrDefaultAsync(x => x.Id == reviewId);
             if (reviewToUpdate is null)
             {
                 throw new NotFoundException(Resource.ResourceManager.GetString("reviewNotFound"));
             }
             _mapper.Map(reviewModifyDto, reviewToUpdate);
-            reviewToUpdate.MaterialId = materialId; ////////////////
+            reviewToUpdate.MaterialId = materialId;
             //_context.Update(genreToUpdate);
             await _context.SaveChangesAsync();
             _logger.LogInformation(Resource.ResourceManager.GetString("succeeded"));
