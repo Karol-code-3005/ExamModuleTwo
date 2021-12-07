@@ -126,11 +126,23 @@
   <data name="creatingGenre" xml:space="preserve">
     <value>Genre creating...</value>
   </data>
+  <data name="creatingMaterial" xml:space="preserve">
+    <value>Material creating...</value>
+  </data>
+  <data name="creatingReview" xml:space="preserve">
+    <value>Review creating...</value>
+  </data>
   <data name="deletingAuthor" xml:space="preserve">
     <value>Author deleting...</value>
   </data>
   <data name="deletingGenre" xml:space="preserve">
     <value>Genre deleting...</value>
+  </data>
+  <data name="deletingMaterial" xml:space="preserve">
+    <value>Material deleting...</value>
+  </data>
+  <data name="deletingReview" xml:space="preserve">
+    <value>Review deleting...</value>
   </data>
   <data name="genreNotFound" xml:space="preserve">
     <value>GENRE NOT FOUND</value>
@@ -141,14 +153,32 @@
   <data name="gettingAllGenres" xml:space="preserve">
     <value>Getting all genres...</value>
   </data>
+  <data name="gettingAllMaterials" xml:space="preserve">
+    <value>Getting all materials...</value>
+  </data>
+  <data name="gettingAllReviews" xml:space="preserve">
+    <value>Getting all reviews...</value>
+  </data>
   <data name="gettingAuthor" xml:space="preserve">
     <value>Getting author...</value>
   </data>
   <data name="gettingGenre" xml:space="preserve">
     <value>Getting genre...</value>
   </data>
+  <data name="gettingMaterial" xml:space="preserve">
+    <value>Getting materiall...</value>
+  </data>
+  <data name="gettingReview" xml:space="preserve">
+    <value>Getting review...</value>
+  </data>
   <data name="itemNotFound" xml:space="preserve">
     <value>ITEM NOT FOUND</value>
+  </data>
+  <data name="materialNotFound" xml:space="preserve">
+    <value>MATERIAL NOT FOUND</value>
+  </data>
+  <data name="reviewNotFound" xml:space="preserve">
+    <value>REVIEW NOT FOUND</value>
   </data>
   <data name="succeeded" xml:space="preserve">
     <value>Operation succeeded</value>
@@ -161,5 +191,11 @@
   </data>
   <data name="updatingGenre" xml:space="preserve">
     <value>Genre updating...</value>
+  </data>
+  <data name="updatingMaterial" xml:space="preserve">
+    <value>Material updating...</value>
+  </data>
+  <data name="updatingReview" xml:space="preserve">
+    <value>Rview updating...</value>
   </data>
 </root>

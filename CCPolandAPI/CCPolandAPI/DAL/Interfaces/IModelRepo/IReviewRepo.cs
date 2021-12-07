@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace CCPolandAPI.DAL.Repositories.Interfaces.IModel
 {
-    public interface IReviewRepo:
-        ICreatable<ReviewModifyDto>,
-        IReadable<Review>,
-        IUpdatable<ReviewModifyDto>,
-        IDeletable
+    public interface IReviewRepo
     {
-        Task<ReviewDto> GetById(int id);
-        Task<IEnumerable<ReviewDto>> GetAll();
+        Task<int> AddAsync(ReviewModifyDto reviewModifyDto, int materialId);
+        Task Delete(int materialId, int reviewId);
+        Task UpdateAsync(int materialId, int reviewId, ReviewModifyDto reviewModifyDto);
+
+        //Task<ReviewDto> GetById(int id);
+        //Task<IEnumerable<ReviewDto>> GetAll();
     }
 }

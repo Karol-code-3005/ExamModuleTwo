@@ -88,6 +88,24 @@ namespace CCPolandAPI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Material creating....
+        /// </summary>
+        public static string creatingMaterial {
+            get {
+                return ResourceManager.GetString("creatingMaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Review creating....
+        /// </summary>
+        public static string creatingReview {
+            get {
+                return ResourceManager.GetString("creatingReview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Author deleting....
         /// </summary>
         public static string deletingAuthor {
@@ -102,6 +120,24 @@ namespace CCPolandAPI.Properties {
         public static string deletingGenre {
             get {
                 return ResourceManager.GetString("deletingGenre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Material deleting....
+        /// </summary>
+        public static string deletingMaterial {
+            get {
+                return ResourceManager.GetString("deletingMaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Review deleting....
+        /// </summary>
+        public static string deletingReview {
+            get {
+                return ResourceManager.GetString("deletingReview", resourceCulture);
             }
         }
         
@@ -133,6 +169,24 @@ namespace CCPolandAPI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting all materials....
+        /// </summary>
+        public static string gettingAllMaterials {
+            get {
+                return ResourceManager.GetString("gettingAllMaterials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting all reviews....
+        /// </summary>
+        public static string gettingAllReviews {
+            get {
+                return ResourceManager.GetString("gettingAllReviews", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Getting author....
         /// </summary>
         public static string gettingAuthor {
@@ -151,11 +205,47 @@ namespace CCPolandAPI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting materiall....
+        /// </summary>
+        public static string gettingMaterial {
+            get {
+                return ResourceManager.GetString("gettingMaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Getting review....
+        /// </summary>
+        public static string gettingReview {
+            get {
+                return ResourceManager.GetString("gettingReview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ITEM NOT FOUND.
         /// </summary>
         public static string itemNotFound {
             get {
                 return ResourceManager.GetString("itemNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MATERIAL NOT FOUND.
+        /// </summary>
+        public static string materialNotFound {
+            get {
+                return ResourceManager.GetString("materialNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to REVIEW NOT FOUND.
+        /// </summary>
+        public static string reviewNotFound {
+            get {
+                return ResourceManager.GetString("reviewNotFound", resourceCulture);
             }
         }
         
@@ -192,6 +282,24 @@ namespace CCPolandAPI.Properties {
         public static string updatingGenre {
             get {
                 return ResourceManager.GetString("updatingGenre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Material updating....
+        /// </summary>
+        public static string updatingMaterial {
+            get {
+                return ResourceManager.GetString("updatingMaterial", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rview updating....
+        /// </summary>
+        public static string updatingReview {
+            get {
+                return ResourceManager.GetString("updatingReview", resourceCulture);
             }
         }
     }
